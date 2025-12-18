@@ -16,11 +16,13 @@ Gem::Specification.new do |spec|
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/patchwork-hub/timelines_extension"
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/CHANGELOG.md"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     Dir["{app,config,db,lib}/**/*", "LICENSE.txt", "Rakefile", "README.md"]
   end
 
   spec.add_dependency "rails", ">= 7.1", "< 9.0"
+  spec.add_dependency "byebug", '~> 11.1'
+  spec.add_dependency "annotaterb", '~> 4.13'
 end
